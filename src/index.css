@@ -6,7 +6,7 @@
 /* Import the fonts.css file */
 @font-face {
   font-family: 'Geist Sans';
-  src: url('/assets/fonts/Geist-Bold.woff2') format('woff2'),
+  src: url('assets/fonts/Geist-Regular.woff2') format('woff2'),
     url('/assets/fonts/Geist-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
