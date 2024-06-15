@@ -23,7 +23,7 @@ function App() {
             <div className="content relative flex flex-col gap-8">
               <div className="flex w-full flex-col gap-2">
                 <img
-                  className="custom-image flex size-14 justify-start"
+                  className="custom-image flex size-12 justify-start"
                   src={Perspective}
                   alt="Dark Black square svg"
                   style={{
@@ -32,8 +32,8 @@ function App() {
                   }}
                 />
                 <div className="flex flex-col gap-4">
-                  <h1 className="home font-bold flex items-center">
-                    Yash Singh
+                  <h1 className="home font-bold flex items-center text-base">
+                    Yash Singh/<span className='hindi-name font-normal '>(यश सिंह)</span>
                     <span className="online-indicator"></span>
                   </h1>
                   <div className="font-light">
@@ -51,10 +51,10 @@ function App() {
                     A multidisciplinary artist who transcends boundaries,
                     creating without limitations.
                   </div>
-                  <div className="flex flex-wrap gap-4">
-                    <a href="">Email</a>
-                    <a href="">Twitter</a>
-                    <a href="">Github</a>
+                  <div className="flex flex-wrap gap-4" id='socials'>
+                    <a href="mailto: yvsh7.btw@gmail.com">Email</a>
+                    <a href="https://x.com/interludeyash">Twitter</a>
+                    <a href="https://github.com/nstlgy">Github</a>
                     <a href="">Works</a>
                     <a href="">CV</a>
                   </div>

@@ -25,21 +25,41 @@ footer {
   animation-fill-mode: forwards;
 }
 
-.projects a,
-.playground a {
-  filter: blur(2.5px);
+.blur-item {
+  animation: fadeIn 0.5s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
+
+.projects a,
+.playground a {
+  color: #111827;
+  text-decoration: none;
+  transition: color 0.25s ease-out;
+}
+
+/* Change color of all links in both sections when any link is hovered */
+.projects a:hover~.playground a,
+.playground a:hover~.projects a,
+.projects:hover a,
+.playground:hover a {
+  color: #d1d5db;
+}
+
+/* Maintain the original color for the hovered link */
 .projects a:hover,
 .playground a:hover {
-  filter: blur(0px);
+  color: #111827 !important;
 }
+
+
+
 
 .online-indicator {
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  background-color: green;
+  width: 8px;
+  height: 8px;
+  background-color: #35a847;
   border-radius: 50%;
   margin-left: 8px;
   position: relative;
@@ -70,4 +90,29 @@ footer {
     transform: translate(-50%, -50%) scale(2);
     opacity: 0;
   }
+}
+
+.hindi-name :hover {}
+
+#socials a {
+  text-decoration: none;
+  position: relative;
+}
+
+#socials a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transform-origin: bottom right;
+  transition: transform 0.1s ease-out;
+}
+
+#socials a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
