@@ -147,7 +147,6 @@ function App() {
                 </a>
               </div>
             </div>
-
             <footer className="justify-center flex text-xs">
               <p className="font-extralight">Designed by &nbsp;</p>
               <p className="font-semibold">Yash Singh &nbsp;</p>

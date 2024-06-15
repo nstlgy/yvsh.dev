@@ -10,9 +10,9 @@ export default defineConfig({
       targets: [
         {
           src: 'src/assets/fonts/*',
-          dest: 'assets/fonts'
-        }
-      ]
-    })
-  ]
+          dest: 'assets/fonts',
+        },
+      ],
+    }),
+  ],
 });
