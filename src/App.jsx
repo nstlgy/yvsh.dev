@@ -1,29 +1,40 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Perspective from '../src/assets/images/BlackSquare.svg';
-
+import Bookmarks from '../src/components/Bookmarks';
 function App() {
   return (
-    <>
+    <Router>
       <div className="fade-in">
         <div className="wrapper relative flex items-center justify-center w-full">
           <main className="relative flex w-full max-w-[640px] flex-col justify-start gap-8 px-8 py-8">
             <nav className="flex justify-center">
               <ul className="flex gap-5 font-mono font-thin">
                 <li>
-                  <a href="">/whoami</a>
+                  <Link to="/whoami">/whoami</Link>
                 </li>
                 <li>
-                  <a href="">/bookmarks</a>
+                  <Link to="/bookmarks">/bookmarks</Link>
                 </li>
                 <li>
-                  <a href="">/contact</a>
+                  <Link to="/contact">/contact</Link>
                 </li>
               </ul>
             </nav>
+
+            <Routes>
+              <Route path="/" />
+              <Route path="/bookmarks" element={<Bookmarks />} />
+              <Route
+                path="/contact"
+                element={<div>Contact Page Content</div>}
+              />
+            </Routes>
+
             <div className="content relative flex flex-col gap-8">
               <div className="flex w-full flex-col gap-2">
                 <img
-                  className="custom-image flex size-12 justify-start"
+                  className="custom-image flex size-14 justify-start"
                   src={Perspective}
                   alt="Dark Black square svg"
                   style={{
@@ -33,7 +44,8 @@ function App() {
                 />
                 <div className="flex flex-col gap-4">
                   <h1 className="home font-bold flex items-center text-base">
-                    Yash Singh/<span className='hindi-name font-normal '>(यश सिंह)</span>
+                    Yash Singh/
+                    {/* <span className="hindi-name font-normal ">(यश सिंह)</span> */}
                     <span className="online-indicator"></span>
                   </h1>
                   <div className="font-light">
@@ -51,7 +63,7 @@ function App() {
                     A multidisciplinary artist who transcends boundaries,
                     creating without limitations.
                   </div>
-                  <div className="flex flex-wrap gap-4" id='socials'>
+                  <div className="flex flex-wrap gap-4" id="socials">
                     <a href="mailto: yvsh7.btw@gmail.com">Email</a>
                     <a href="https://x.com/interludeyash">Twitter</a>
                     <a href="https://github.com/nstlgy">Github</a>
@@ -155,7 +167,7 @@ function App() {
           </main>
         </div>
       </div>
-    </>
+    </Router>
   );
 }
 

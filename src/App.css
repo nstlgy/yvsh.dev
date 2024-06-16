@@ -30,7 +30,6 @@ footer {
   animation-fill-mode: forwards;
 }
 
-
 .projects a,
 .playground a {
   color: #111827;
@@ -39,8 +38,8 @@ footer {
 }
 
 /* Change color of all links in both sections when any link is hovered */
-.projects a:hover~.playground a,
-.playground a:hover~.projects a,
+.projects a:hover ~ .playground a,
+.playground a:hover ~ .projects a,
 .projects:hover a,
 .playground:hover a {
   color: #d1d5db;
@@ -51,9 +50,6 @@ footer {
 .playground a:hover {
   color: #111827 !important;
 }
-
-
-
 
 .online-indicator {
   display: inline-block;
@@ -92,7 +88,8 @@ footer {
   }
 }
 
-.hindi-name :hover {}
+.hindi-name :hover {
+}
 
 #socials a {
   text-decoration: none;
