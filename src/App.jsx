@@ -44,7 +44,7 @@ function App() {
                 />
                 <div className="flex flex-col gap-4">
                   <h1 className="home font-bold flex items-center text-base">
-                    Yash Singh/
+                    Yash Singh
                     {/* <span className="hindi-name font-normal ">(यश सिंह)</span> */}
                     <span className="online-indicator"></span>
                   </h1>
